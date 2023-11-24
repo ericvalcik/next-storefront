@@ -23,6 +23,7 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.5.6
   react: 18.2.0
   react-dom: 18.2.0
+  tailwind-merge: ^2.0.0
   tailwindcss: ^3.3.5
   typescript: 5.2.2
 
@@ -34,6 +35,7 @@ dependencies:
   next: 14.0.0_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  tailwind-merge: 2.0.0
 
 devDependencies:
   '@tailwindcss/container-queries': 0.1.1_tailwindcss@3.3.5
@@ -110,7 +112,6 @@ packages:
     engines: { node: '>=6.9.0' }
     dependencies:
       regenerator-runtime: 0.14.0
-    dev: true
 
   /@eslint-community/eslint-utils/4.4.0_eslint@8.54.0:
     resolution:
@@ -3714,7 +3715,6 @@ packages:
       {
         integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==
       }
-    dev: true
 
   /regexp-tree/0.1.27:
     resolution:
@@ -4216,6 +4216,15 @@ packages:
       }
     engines: { node: '>= 0.4' }
     dev: true
+
+  /tailwind-merge/2.0.0:
+    resolution:
+      {
+        integrity: sha512-WO8qghn9yhsldLSg80au+3/gY9E4hFxIvQ3qOmlpXnqpDKoMruKfi/56BbbMg6fHTQJ9QD3cc79PoWqlaQE4rw==
+      }
+    dependencies:
+      '@babel/runtime': 7.23.2
+    dev: false
 
   /tailwindcss/3.3.5:
     resolution:

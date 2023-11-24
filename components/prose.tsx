@@ -1,12 +1,12 @@
 import clsx from 'clsx';
-import type { FunctionComponent } from 'react';
+import type { FC } from 'react';
 
 interface TextProps {
   html: string;
   className?: string;
 }
 
-const Prose: FunctionComponent<TextProps> = ({ html, className }) => {
+const Prose: FC<TextProps> = ({ html, className }) => {
   return (
     <div
       className={clsx(
