@@ -25,15 +25,15 @@ export default function Search() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="w-max-[550px] relative w-full lg:w-80 xl:w-full">
+    <form onSubmit={onSubmit} className="w-max-32 relative w-full xl:w-full">
       <input
         key={searchParams?.get('q')}
         type="text"
         name="search"
-        placeholder="Search for products..."
+        placeholder="Search"
         autoComplete="off"
         defaultValue={searchParams?.get('q') || ''}
-        className="w-full rounded-lg border bg-white px-4 py-2 text-sm text-black placeholder:text-neutral-500 dark:border-neutral-800 dark:bg-transparent dark:text-white dark:placeholder:text-neutral-400"
+        className="rounded-full bg-transparent px-4 py-1 text-sm text-white ring-1 ring-transparent placeholder:text-white focus-visible:w-full"
       />
       <div className="absolute right-0 top-0 mr-3 flex h-full items-center">
         <MagnifyingGlassIcon className="h-4" />

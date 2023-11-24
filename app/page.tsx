@@ -15,6 +15,7 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
+      <div className="flex h-[50vh] w-full items-center justify-center">Animation placeholder</div>
       <ThreeItemGrid />
       <Suspense>
         <Carousel />

@@ -13,15 +13,15 @@ export default async function Navbar() {
   const menu = await getMenu('next-js-frontend-header-menu');
 
   return (
-    <nav className="relative flex items-center justify-between p-4 lg:px-6">
+    <nav className="fixed z-10 flex w-full items-center justify-center pt-4">
       <div className="block flex-none md:hidden">
         <MobileMenu menu={menu} />
       </div>
-      <div className="flex w-full items-center">
+      <div className="flex w-full max-w-2xl items-center justify-between rounded-full bg-[#0f1014]/70 px-3.5 py-2 ring-1 ring-inset ring-white/10 backdrop-blur-lg">
         <div className="flex w-full md:w-1/3">
-          <Link href="/" className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6">
+          <Link href="/" className="mr-4 flex w-full items-center justify-center md:w-auto">
             <LogoSquare />
-            <div className="ml-2 flex-none text-sm font-medium uppercase md:hidden lg:block">
+            <div className="ml-1 flex-none text-sm font-medium uppercase md:hidden lg:block">
               {SITE_NAME}
             </div>
           </Link>
@@ -40,10 +40,11 @@ export default async function Navbar() {
             </ul>
           ) : null}
         </div>
-        <div className="hidden justify-center md:flex md:w-1/3">
-          <Search />
-        </div>
-        <div className="flex justify-end md:w-1/3">
+        <div className="flex items-center justify-end justify-self-end">
+          {/* let's disable search for now */}
+          <div className="mr-2 hidden">
+            <Search />
+          </div>
           <Suspense fallback={<OpenCart />}>
             <Cart />
           </Suspense>
