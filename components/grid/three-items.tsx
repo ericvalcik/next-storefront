@@ -5,7 +5,11 @@ import Link from 'next/link';
 
 function ThreeItemGridItem({ item, priority }: { item: Product; priority?: boolean }) {
   return (
-    <div className={'mt-8 rounded-2xl bg-gradientdown first:mt-0 md:col-span-1 md:row-span-1'}>
+    <div
+      className={
+        'mt-8 rounded-2xl bg-gradientdown transition-all duration-150 first:mt-0 hover:shadow-lgcenter hover:shadow-white/10 md:col-span-1 md:row-span-1'
+      }
+    >
       <Link
         className="relative block aspect-[3.5/5] h-full w-full"
         href={`/product/${item.handle}`}
