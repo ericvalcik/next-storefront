@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.3 36.65">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 119.3 56.65">
   <defs>
+    <filter id="inset-shadow">
+      <!--Shadow offset-->
+      <feOffset dx="0" dy="0"/>
+      <!--Shadow blur-->
+      <feGaussianBlur stdDeviation="4" result="offset-blur"/>
+      <!--Invert drop shadow to make an inset shadow-->
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/>
+      <!--Cut color inside shadow-->
+      <feFlood flood-color="white" flood-opacity=".15" result="color"/>
+      <feComposite operator="in" in="color" in2="inverse" result="shadow"/>
+      <!--Placing shadow over element-->
+      <feComposite operator="over" in="shadow" in2="SourceGraphic" />
+      <!-- Placing stroke (ring) over the shadow -->
+
+    </filter>
     <style>
-      .cls-1 {
-        stroke-miterlimit: 10;
-        fill: none;
+      .inset-shadow {
+        filter: url(#inset-shadow);
       }
     </style>
   </defs>
-  <path class="cls-1" d="m85.58,9.72h-19.62C62.62,4.2,56.57.5,49.65.5s-12.97,3.7-16.31,9.22H13.72C6.42,9.72.5,15.64.5,22.94s5.92,13.22,13.22,13.22h71.87c7.3,0,13.22-5.92,13.22-13.22s-5.92-13.22-13.22-13.22Z"/>
+  <path class="inset-shadow" d="m85.58,9.72h-19.62C62.62,4.2,56.57.5,49.65.5s-12.97,3.7-16.31,9.22H13.72C6.42,9.72.5,15.64.5,22.94s5.92,13.22,13.22,13.22h71.87c7.3,0,13.22-5.92,13.22-13.22s-5.92-13.22-13.22-13.22Z"/>
+  <path d="m85.58,9.72h-19.62C62.62,4.2,56.57.5,49.65.5s-12.97,3.7-16.31,9.22H13.72C6.42,9.72.5,15.64.5,22.94s5.92,13.22,13.22,13.22h71.87c7.3,0,13.22-5.92,13.22-13.22s-5.92-13.22-13.22-13.22Z" fill="none" />
 </svg>
