@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import Label from '../label';
+import Hanger from 'public/hanger.svg';
 
 export function GridTileImage({
   isInteractive = true,
@@ -23,6 +24,7 @@ export function GridTileImage({
         'border-1 group flex h-full w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 transition-all duration-150 hover:border-2 hover:border-blue-600'
       )}
     >
+      <Hanger className="border-1 absolute top-6 w-32 stroke-white/10 px-2 transition-all duration-150 group-hover:stroke-blue-600 group-hover:drop-shadow-lgcenter" />
       {props.src && false ? (
         // eslint-disable-next-line jsx-a11y/alt-text -- `alt` is inherited from `props`, which is being enforced with TypeScript
         <Image

@@ -9,6 +9,9 @@ module.exports = {
       boxShadow: {
         lgcenter: '0 2px 20px 6px rgb(0 0 0 / 0.1), 0 0 10px 2px rgb(0 0 0 / 0.1)'
       },
+      dropShadow: {
+        lgcenter: '0 0 2px rgba(255, 255, 255, 1)'
+      },
       backgroundImage: {
         gradientdown:
           'radial-gradient(140% 107.13% at 50% 10%,transparent 45%,#364ef580 67%,#6698ff 100%);'
