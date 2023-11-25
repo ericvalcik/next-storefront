@@ -7,7 +7,7 @@ function ThreeItemGridItem({ item, priority }: { item: Product; priority?: boole
   return (
     <div
       className={
-        'mt-8 rounded-2xl bg-gradientdown transition-all duration-150 first:mt-0 hover:shadow-lgcenter hover:shadow-white/10 md:col-span-1 md:row-span-1'
+        'mt-4 rounded-2xl bg-gradientdown transition-all duration-150 first:mt-0 hover:shadow-lgcenter hover:shadow-white/10 xs:mt-8 md:col-span-1 md:row-span-1'
       }
     >
       <Link
@@ -43,7 +43,7 @@ export async function TwoColGrid() {
   const [firstProduct, secondProduct, thirdProduct] = homepageItems;
 
   return (
-    <section className="mx-auto max-w-screen-2xl columns-1 gap-8 pb-4 md:columns-2">
+    <section className="mx-auto max-w-screen-2xl columns-1 gap-4 px-4 pb-4 xs:gap-8 xs:px-8 md:columns-2">
       <ThreeItemGridItem item={firstProduct} priority={true} />
       <ThreeItemGridItem item={secondProduct} priority={true} />
       <ThreeItemGridItem item={thirdProduct} />
