@@ -1,5 +1,4 @@
-import { Carousel } from 'components/carousel';
-import { ThreeItemGrid } from 'components/grid/three-items';
+import { TwoColGrid } from 'components/grid/three-items';
 import Footer from 'components/layout/footer';
 import { Suspense } from 'react';
 
@@ -16,12 +15,9 @@ export default async function HomePage() {
   return (
     <>
       <div className="flex h-[50vh] w-full items-center justify-center">Animation placeholder</div>
-      <ThreeItemGrid />
+      <TwoColGrid />
       <Suspense>
-        {/*<Carousel /> comment out carousel for now */}
-        <Suspense>
-          <Footer />
-        </Suspense>
+        <Footer />
       </Suspense>
     </>
   );

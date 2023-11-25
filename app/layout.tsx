@@ -37,7 +37,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <body className="dark bg-[#0f1014] text-white selection:bg-pink-500">
         <Navbar />
         <Suspense>
-          <main className="mx-auto mt-24 max-w-3xl">{children}</main>
+          <main className="mx-auto mt-24 max-w-4xl">{children}</main>
         </Suspense>
       </body>
     </html>
