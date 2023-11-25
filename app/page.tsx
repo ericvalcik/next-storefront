@@ -18,7 +18,7 @@ export default async function HomePage() {
       <div className="flex h-[50vh] w-full items-center justify-center">Animation placeholder</div>
       <ThreeItemGrid />
       <Suspense>
-        <Carousel />
+        {/*<Carousel /> comment out carousel for now */}
         <Suspense>
           <Footer />
         </Suspense>

@@ -6,6 +6,9 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      screens: {
+        xs: '400px'
+      },
       fontFamily: {
         sans: ['var(--font-geist-sans)']
       },

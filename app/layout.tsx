@@ -34,10 +34,10 @@ export const metadata = {
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={GeistSans.variable}>
-      <body className="bg-[#0f1014] text-white selection:bg-pink-500">
+      <body className="dark bg-[#0f1014] text-white selection:bg-pink-500">
         <Navbar />
         <Suspense>
-          <main className="mx-auto max-w-3xl">{children}</main>
+          <main className="mx-auto mt-24 max-w-3xl">{children}</main>
         </Suspense>
       </body>
     </html>
